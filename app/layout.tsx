@@ -6,7 +6,6 @@ import SketchbookLayout from "@/components/SketchbookLayout";
 import Navigation from "@/components/Navigation";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { TerminalProvider } from "@/context/TerminalContext";
-// Analytics deferred via next/script in component
 import { Analytics } from "@/components/Analytics";
 import { PERSONAL_LINKS, SITE } from "@/lib/links";
 import "./globals.css";
@@ -17,21 +16,20 @@ const patrickHand = Patrick_Hand({
   weight: "400",
   variable: "--font-hand",
   subsets: ["latin"],
-  display: "swap", // Prevent FOIT for faster text rendering
+  display: "swap",
 });
 
 const firaCode = Fira_Code({
   weight: "400",
   variable: "--font-code",
   subsets: ["latin"],
-  display: "optional", // Fira Code is secondary (monospace only) — don't block render
+  display: "optional",
 });
 
 export const metadata: Metadata = {
-  // REPLACE:
-title: "Disha Rathore | Software Engineer",
-description: "Pre-final year CS student skilled in full-stack development, systems programming, and machine learning. Interned at DRDO, IGDTUW, and IIT Roorkee. LeetCode Knight (Top 5%).",
-keywords: ["Disha Rathore", "Software Engineer", "Full Stack Developer", "Machine Learning", "DRDO", "LeetCode Knight", "DSA", "Systems Programming"],
+  title: "Disha Rathore | Software Engineer",
+  description: "Final year CS student building production-grade full-stack platforms and AI systems. 6 live projects. Interned at DRDO, IGDTUW, IIT Roorkee. LeetCode Knight (Top 5%). Placement 2026.",
+  keywords: ["Disha Rathore", "Software Engineer", "Full Stack Developer", "Machine Learning", "DRDO", "LeetCode Knight", "DSA", "Systems Programming"],
   authors: [{ name: SITE.name, url: PERSONAL_LINKS.linkedin }],
   creator: "Disha Rathore",
   publisher: "Disha Rathore",
@@ -68,7 +66,7 @@ keywords: ["Disha Rathore", "Software Engineer", "Full Stack Developer", "Machin
   twitter: {
     card: 'summary_large_image',
     title: "Disha Rathore | Software Engineer",
-    description: "Pre-final year CS student skilled in full-stack, systems programming, and ML. Interned at DRDO, IGDTUW, IIT Roorkee.",
+    description: "Final year CS student — 6 live projects, DRDO/IGDTUW/IIT Roorkee internships. LeetCode Knight. Placement 2026.",
     images: ['/resources/og-image.png'],
   },
   robots: {
@@ -92,13 +90,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* JokeAPI: dns-prefetch only (non-critical, used on-demand by terminal) */}
         <link rel="dns-prefetch" href="https://v2.jokeapi.dev" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#fdfbf7" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
-
-        {/* Structured Data (JSON-LD) for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,8 +105,7 @@ export default function RootLayout({
                   "@id": `${SITE.url}/#website`,
                   "url": SITE.url,
                   "name": "Disha Rathore Portfolio",
-                  "description": "Pre-final year CS student skilled in full-stack development, systems programming, and machine learning.",
-
+                  "description": "Final-year CS (AI) student building production-grade full-stack platforms, AI systems, and hyperlocal marketplaces. LeetCode Knight, Top 5%.",
                   "publisher": { "@id": "https://portfolio-website-hs3m.vercel.app/#person" }
                 },
                 {

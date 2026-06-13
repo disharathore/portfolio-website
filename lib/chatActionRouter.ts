@@ -58,19 +58,21 @@ const LINK_TARGETS: Array<{ pattern: RegExp; action: ActionExecution }> = [
 ];
 
 const PROJECT_REPO_TARGETS: Partial<Record<ProjectSlug, string>> = {
-  'file-system': PROJECT_LINKS.fileSystem,
+  'servenow': PROJECT_LINKS.servenow,
+  'foodbridge': PROJECT_LINKS.foodbridge,
+  'campuslens': PROJECT_LINKS.campuslens,
+  'loanwizard': PROJECT_LINKS.loanwizard,
+  'codebuddy': PROJECT_LINKS.codebuddy,
   'swasthya-saathi': PROJECT_LINKS.swasthyaSaathi,
-  'greencart': PROJECT_LINKS.greencart,
-  'yuvakhel': PROJECT_LINKS.yuvakhel,
-  'my-yoga-canvas': PROJECT_LINKS.myYogaCanvas,
 };
 
 const PROJECT_ALIAS_TOKENS: Array<{ slug: ProjectSlug; aliases: string[] }> = [
-  { slug: 'file-system', aliases: ['file system', 'filesystem', 'drdo project', 'c++ project'] },
-  { slug: 'swasthya-saathi', aliases: ['swasthya saathi', 'health app', 'health tracker', 'swasthya'] },
-  { slug: 'greencart', aliases: ['greencart', 'green cart', 'eco commerce', 'sustainable shop'] },
-  { slug: 'yuvakhel', aliases: ['yuvakhel', 'yuva khel', 'sports platform', 'sports app'] },
-  { slug: 'my-yoga-canvas', aliases: ['yoga canvas', 'my yoga canvas', 'yoga app', 'wellness app'] },
+  { slug: 'servenow', aliases: ['servenow', 'serve now', 'hyperlocal', 'service marketplace', 'booking app'] },
+  { slug: 'foodbridge', aliases: ['foodbridge', 'food bridge', 'food rescue', 'zomato project', 'ngo food'] },
+  { slug: 'campuslens', aliases: ['campuslens', 'campus lens', 'meeting ai', 'transcription', 'action items'] },
+  { slug: 'loanwizard', aliases: ['loanwizard', 'loan wizard', 'hackathon', 'tenzorx', 'loan ai', 'poonawalla'] },
+  { slug: 'codebuddy', aliases: ['codebuddy', 'code buddy', 'pair programmer', 'monaco', 'hint ladder'] },
+  { slug: 'swasthya-saathi', aliases: ['swasthya saathi', 'health app', 'health tracker', 'swasthya', 'migrant health'] },
 ];
 
 const EXACT_ACTION_LABELS = new Map(

@@ -68,7 +68,7 @@ function buildRecentActionContext(messages: Array<{ role: string; content: strin
   return recentActions.join('\n');
 }
 
-export function buildDhruvSystemPrompt(messages: Array<{ role: string; content: string; action?: ActionExecution | null }>): string {
+export function buildSystemPrompt(messages: Array<{ role: string; content: string; action?: ActionExecution | null }>): string {
   const facts = getRelevantDhruvFacts(messages);
   const recentActions = buildRecentActionContext(messages);
 

@@ -97,6 +97,12 @@ const PROJECT_FACT_TEXT_BY_SLUG: Partial<Record<ProjectSlug, string>> = {
 
 const PERSONAL_FACTS: FactEntry[] = [
   {
+    id: 'victory-project',
+    text: 'Victory is Disha\'s first hardware project — an embedded systems project involving circuit design, microcontroller programming, and building a smart assistive device from scratch. Documented fully in a Canva presentation. There is a dedicated page at /victory on this portfolio.',
+    tags: ['victory', 'hardware', 'embedded', 'circuit', 'microcontroller', 'first project', 'trophy', 'physical'],
+    priority: 8,
+  },
+  {
     id: 'seeking',
     text: 'Entering placement season 2026 — looking for full-stack engineering, AI/ML systems, or backend-heavy product roles. Open to both on-campus and off-campus opportunities.',
     tags: ['seeking', 'opportunities', 'job', 'hire', 'hiring', 'looking', 'open to work', 'placement', 'campus'],

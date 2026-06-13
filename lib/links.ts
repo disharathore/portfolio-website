@@ -5,6 +5,7 @@ export const PERSONAL_LINKS = {
   email: 'mailto:disharathore555@gmail.com',
   resume: '/resources/resume.pdf',
   phone: 'tel:+919289328192',
+  victoryProject: '/victory',
 } as const;
 
 export const PROJECT_LINKS = {
@@ -35,4 +36,5 @@ export const OPEN_LINK_KEYS: Record<string, string> = {
   'project-loanwizard': PROJECT_LINKS.loanwizard,
   'project-codebuddy': PROJECT_LINKS.codebuddy,
   'project-swasthya-saathi': PROJECT_LINKS.swasthyaSaathi,
+  'victoryproject': PERSONAL_LINKS.victoryProject,
 } as const;

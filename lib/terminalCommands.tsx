@@ -94,7 +94,7 @@ export const createCommandRegistry = (router: AppRouterInstance): Record<string,
             <div className="space-y-2">
                 <p>Hey, I&apos;m <strong className="text-emerald-400">Disha</strong> 👋</p>
                 <p>I build scalable systems and solve real-world problems through clean, efficient code.</p>
-                <p>I&apos;m a <strong className="text-emerald-400">pre-final year CS student</strong> with internships at DRDO, IGDTUW, and IIT Roorkee — working on systems, full-stack apps, and ML solutions.</p>
+                <p>I&apos;m a <strong className="text-emerald-400">final year CS student</strong> entering placement season 2026 — with internships at DRDO, IGDTUW, and IIT Roorkee, and 6 live projects shipped.</p>
                 <p>I&apos;m a LeetCode Knight (1884 rating, top 5% globally) and love breaking down complex problems into simple, reliable solutions.</p>
             </div>
         )
@@ -175,10 +175,10 @@ export const createCommandRegistry = (router: AppRouterInstance): Record<string,
                     <div>
                         <p className="text-emerald-400 font-bold border-b border-gray-600 mb-2 uppercase tracking-wider text-xs">Core Tech</p>
                         <div className="pl-1 space-y-1 text-gray-300">
-                            <p>• <span className="text-white font-semibold">Languages:</span> C++, Python, JavaScript, TypeScript</p>
-                            <p>• <span className="text-white font-semibold">Frontend:</span> Next.js, React, Tailwind CSS</p>
-                            <p>• <span className="text-white font-semibold">Backend:</span> Node.js, Express, MongoDB, REST APIs</p>
-                            <p>• <span className="text-white font-semibold">ML/AI:</span> ML Libraries, Data Science, Chrome Extensions</p>
+                            <p>• <span className="text-white font-semibold">Languages:</span> Python, JS, TypeScript, C++, Dart</p>
+                            <p>• <span className="text-white font-semibold">Frontend:</span> React 18, Next.js 14, Tailwind CSS</p>
+                            <p>• <span className="text-white font-semibold">Backend:</span> Node.js, FastAPI, Flask, Socket.io, PostgreSQL, Redis, MongoDB</p>
+                            <p>• <span className="text-white font-semibold">AI:</span> Groq LLM, Groq Vision, Llama 3 70B, Llama 4 Scout</p>
                         </div>
                     </div>
                     <div>
@@ -199,7 +199,9 @@ export const createCommandRegistry = (router: AppRouterInstance): Record<string,
                         <span>🏆 LeetCode Knight (Rating 1884)</span>
                         <span>⭐ Top 5% Globally on LeetCode</span>
                         <span>🏛 DRDO Intern (Systems)</span>
-                        <span>🎓 B.Tech CS (Pre-Final Year)</span>
+                        <span>🏅 TenzorX 2026 Winner</span>
+                        <span>🚀 6 Live Projects Shipped</span>
+                        <span>🎓 B.Tech CS (Final Year)</span>
                     </div>
                 </div>
 
@@ -224,9 +226,9 @@ export const createCommandRegistry = (router: AppRouterInstance): Record<string,
         const file = args[0];
         if (!file) return { output: "Usage: cat [filename]" };
         const files: Record<string, string> = {
-            "about.md": "Disha Rathore: Pre-final year CS student. Interned at DRDO, IGDTUW, IIT Roorkee. LeetCode Knight (1884, Top 5%).",
-            "projects.json": "[ { \"name\": \"File System\", \"stack\": \"C++ / FUSE\" }, { \"name\": \"Swasthya Saathi\", \"stack\": \"React + Node.js\" }, { \"name\": \"GreenCart\", \"stack\": \"MERN\" }, ... ]",
-            "skills.md": "Languages: C++, Python, JS, TypeScript | Frameworks: React, Next.js | Core: DSA, System Design | Tools: Git, REST APIs, ML Libraries",
+            "about.md": "Disha Rathore: Final year CS student, placement season 2026. 6 live projects shipped. Interned at DRDO, IGDTUW, IIT Roorkee. LeetCode Knight (1884, Top 5%).",
+            "projects.json": "[ { \"name\": \"ServeNow\", \"stack\": \"Next.js + PostgreSQL + Redis\" }, { \"name\": \"FoodBridge\", \"stack\": \"React + MongoDB + Socket.io\" }, { \"name\": \"CampusLens\", \"stack\": \"FastAPI + Groq\" }, { \"name\": \"LoanWizard\", \"stack\": \"React + Groq Vision\" }, ... ]",
+            "skills.md": "Languages: Python, JS, TypeScript, C++, Dart | Frontend: React, Next.js 14, Tailwind | Backend: Node.js, FastAPI, Flask, Socket.io | DB: PostgreSQL, MongoDB, Redis | AI: Groq LLM, Groq Vision | Tools: Git, Vercel, Razorpay",
             "writing.md": "Essay: 'When the Grid Goes Dark: Why Cyber Resilience Is Now a Disaster Management Problem' — run 'open writing.md' to read it.",
             "contact.txt": "Email: disharathore555@gmail.com\nPhone: (+91) 9289328192",
             "resume.pdf": "Error: Binary file not readable. Try 'open resume.pdf'",

@@ -11,7 +11,7 @@ const SOCIALS = [
     { name: "GitHub", icon: GitBranch, url: PERSONAL_LINKS.github, color: SOCIAL_COLORS.github },
     { name: "LinkedIn", icon: Link2, url: PERSONAL_LINKS.linkedin, color: SOCIAL_COLORS.linkedin },
     { name: "LeetCode", icon: Code, url: PERSONAL_LINKS.leetcode, color: "hover:text-yellow-500" },
-    { name: "Victory Project", icon: Trophy, url: PERSONAL_LINKS.victoryProject, color: "hover:text-amber-500" },
+    { name: "Victory Project", icon: Trophy, url: "/victory", color: "hover:text-amber-500" },
     { name: "Email", icon: Mail, url: PERSONAL_LINKS.email, color: SOCIAL_COLORS.email },
     { name: "Phone", icon: Phone, url: PERSONAL_LINKS.phone, color: SOCIAL_COLORS.phone },
 ];

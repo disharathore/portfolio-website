@@ -4,7 +4,7 @@ import { NextRequest } from 'next/server';
 import type { ActionExecution } from '@/lib/actions';
 import { resolveChatIntent } from '@/lib/chatActionRouter';
 import { signAssistantMessage, verifyAssistantMessage } from '@/lib/chatHistory.server';
-import { buildDhruvSystemPrompt } from '@/lib/chatContext.server';
+import { buildSystemPrompt } from '@/lib/chatContext.server';
 import { sanitizeAssistantReplyText } from '@/lib/chatSanitization';
 import { CHAT_CONFIG, getContextualFallback } from '@/lib/chatContext';
 import type { ClientChatMessage, SanitizedChatMessage } from '@/lib/chatTransport';
@@ -180,7 +180,7 @@ export async function POST(request: NextRequest) {
 
     // Build full message array with system prompt (server-side only!)
     const apiMessages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
-      { role: 'system', content: buildDhruvSystemPrompt(sanitized) },
+      { role: 'system', content: buildSystemPrompt(sanitized) },
       ...sanitized,
     ];
 

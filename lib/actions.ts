@@ -19,7 +19,7 @@ export interface ActionDef {
   projectSlug?: ProjectSlug;
 }
 
-export const VALID_NAVIGATION_PATHS = ['/', '/about', '/projects', '/resume', '/chat'] as const;
+export const VALID_NAVIGATION_PATHS = ['/', '/about', '/projects', '/resume', '/chat', '/victory'] as const;
 export const VALID_THEME_ACTIONS = ['dark', 'light', 'toggle'] as const;
 
 type NavigationPath = (typeof VALID_NAVIGATION_PATHS)[number];
@@ -34,6 +34,7 @@ const NAVIGATION_REPLIES: Record<NavigationPath, string> = {
   '/projects': 'Taking you to the projects page ~',
   '/resume': 'Opening the resume page ~',
   '/chat': 'Bringing you back to the chat page ~',
+  '/victory': 'Opening the Victory Project page ~',
 };
 
 const THEME_REPLIES: Record<ThemeAction, string> = {
@@ -50,11 +51,12 @@ const OPEN_LINK_TOOL_OPTIONS = [
   { key: 'email', url: PERSONAL_LINKS.email, fallbackReply: 'Opening email ~' },
   { key: 'phone', url: PERSONAL_LINKS.phone, fallbackReply: 'Opening the phone shortcut ~' },
   { key: 'resume', url: PERSONAL_LINKS.resume, fallbackReply: 'Opening the resume PDF ~' },
-  { key: 'project-file-system', url: PROJECT_LINKS.fileSystem, fallbackReply: 'Opening the File System repo ~' },
+  { key: 'project-servenow', url: PROJECT_LINKS.servenow, fallbackReply: 'Opening the ServeNow repo ~' },
+  { key: 'project-foodbridge', url: PROJECT_LINKS.foodbridge, fallbackReply: 'Opening the FoodBridge repo ~' },
+  { key: 'project-campuslens', url: PROJECT_LINKS.campuslens, fallbackReply: 'Opening the CampusLens repo ~' },
+  { key: 'project-loanwizard', url: PROJECT_LINKS.loanwizard, fallbackReply: 'Opening the LoanWizard repo ~' },
+  { key: 'project-codebuddy', url: PROJECT_LINKS.codebuddy, fallbackReply: 'Opening the CodeBuddy repo ~' },
   { key: 'project-swasthya-saathi', url: PROJECT_LINKS.swasthyaSaathi, fallbackReply: 'Opening the Swasthya Saathi repo ~' },
-  { key: 'project-greencart', url: PROJECT_LINKS.greencart, fallbackReply: 'Opening the GreenCart repo ~' },
-  { key: 'project-yuvakhel', url: PROJECT_LINKS.yuvakhel, fallbackReply: 'Opening the YuvaKhel repo ~' },
-  { key: 'project-my-yoga-canvas', url: PROJECT_LINKS.myYogaCanvas, fallbackReply: 'Opening the My Yoga Canvas repo ~' },
 ] as const;
 
 const OPEN_LINK_OPTIONS_BY_URL = new Map<string, (typeof OPEN_LINK_TOOL_OPTIONS)[number]>(
@@ -89,8 +91,16 @@ export const ACTION_REGISTRY: ActionDef[] = [
     navigateTo: '/projects',
   },
   {
-    label: 'Open the File System repo',
-    openUrls: [PROJECT_LINKS.fileSystem],
+    label: 'Open the ServeNow repo',
+    openUrls: [PROJECT_LINKS.servenow],
+  },
+  {
+    label: 'Open the FoodBridge repo',
+    openUrls: [PROJECT_LINKS.foodbridge],
+  },
+  {
+    label: 'Open the CampusLens repo',
+    openUrls: [PROJECT_LINKS.campuslens],
   },
   {
     label: 'Open your GitHub profile',
@@ -162,14 +172,14 @@ export function getFollowupActions(): string[] {
 /** Conversational followup suggestions */
 export const FOLLOWUP_CONVERSATIONAL = [
   "What projects have you worked on?",
+  "Tell me about ServeNow",
+  "How does FoodBridge work?",
   "Tell me about your DRDO internship",
-  "How did you build the File System?",
   "What's your favorite language?",
-  "How did you get into competitive programming?",
+  "Tell me about LoanWizard",
   "What do you enjoy most about your work?",
   "Tell me about your LeetCode journey",
   "What's your tech stack?",
-  "Tell me about Swasthya Saathi",
   "What are you currently learning?",
 ] as const;
 
